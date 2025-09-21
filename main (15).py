@@ -7,6 +7,7 @@ import json
 from datetime import datetime, timedelta
 import re
 import time
+from keep_alive import keep_alive
 
 # Bot setup
 intents = discord.Intents.default()
@@ -2376,4 +2377,5 @@ if __name__ == "__main__":
     if not TOKEN:
         print("Please set the TOKEN environment variable")
     else:
+        keep_alive()
         bot.run(TOKEN)
